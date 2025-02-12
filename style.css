@@ -1,0 +1,94 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif; /* Fallback font family */
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove default margin */
+    background-image: url('images/Design site.jpg'); /* Set background image */
+    background-size: cover; /* Ensure background image covers entire page */
+    background-position: center; /* Center the background image */
+    overflow: hidden; /* Prevent scrollbar due to flying hearts */
+}
+
+/* Main Container */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Image Container */
+#image-container {
+    margin-bottom: 20px;
+}
+
+/* Question Styling */
+#question {
+    font-family: 'Sacramento', cursive;
+    font-size: 52px;
+    color: #B22222; /* Dark red color */
+}
+
+/* Romantic Text Styling */
+#romantic-text {
+    font-size: 20px;
+    color: #B22222;
+    font-style: italic;
+    max-width: 80%;
+    margin-top: 10px;
+}
+
+/* Thank You Message Styling (for the second page) */
+#thank-you-message {
+    font-size: 24px;
+    font-style: italic;
+    color: #B22222;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+#options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 26px;
+    font-family: 'Sacramento', cursive;
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Flying Heart Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    bottom: -10px;
+    color: red;
+    font-size: 24px;
+    animation: float 4s linear infinite;
+}
